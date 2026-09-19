@@ -1658,9 +1658,25 @@
 
     .guide-card,
     .property-card,
-    .project-card {
-        width: min(100%, 430px);
+    .project-card,
+    .service-card,
+    .blog-card {
+        width: min(100%, 360px);
         margin-inline: auto;
+    }
+
+    .guide-card,
+    .service-card,
+    .project-card {
+        min-height: 0;
+    }
+
+    .service-card {
+        padding: 26px 20px;
+    }
+
+    .blog-card > img {
+        height: 190px;
     }
 
     .market__heading {
@@ -1719,7 +1735,7 @@
 @media (max-width: 520px) {
     /* Mobile portrait */
     .container {
-        width: min(calc(100% - 24px), var(--container));
+        width: min(calc(100% - 32px), var(--container));
     }
 
     .header__inner {
@@ -1774,22 +1790,9 @@
         height: 390px;
     }
 
-    .revenue-card {
-        left: 12px;
-        bottom: 15px;
-        width: 170px;
-        min-height: 130px;
-        padding: 15px;
-    }
-
-    .revenue-card strong {
-        font-size: 18px;
-    }
-
+    .revenue-card,
     .how-it-works {
-        min-width: 145px;
-        min-height: 52px;
-        font-size: 11px;
+        display: none;
     }
 
     .about-feature__visual {
